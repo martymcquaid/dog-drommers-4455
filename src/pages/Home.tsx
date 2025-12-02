@@ -40,7 +40,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden lg:block rounded-2xl overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-31?fill?placeholder" alt="Happy dog" className="w-full h-96 object-cover" />
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=1200&auto=format&fit=crop" alt="Happy dog" className="w-full h-96 object-cover" />
           </div>
         </div>
       </section>
