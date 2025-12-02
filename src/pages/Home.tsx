@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react'\nimport Paw from '../components/Paw'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
