@@ -7,6 +7,7 @@ export default function Home() {
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Pawfect Groomers</h1>
           <p className="text-slate-200 mb-6">Gentle, stylish grooming for every dog. We pamper from nose to tail.</p>
+          <p className="text-slate-300 mb-6">Now offering weekend slots and paw-dorable add-ons for extra sparkle.</p>
           <div className="flex space-x-4">
             <Link to="/services" className="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-4 py-2 rounded">View Services</Link>
             <Link to="/booking" className="bg-slate-200 text-slate-900 font-semibold px-4 py-2 rounded">Book Now</Link>
