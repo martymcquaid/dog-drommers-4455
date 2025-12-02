@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 export default function Services() {
   const services = [
@@ -16,8 +16,11 @@ export default function Services() {
         <p className="text-slate-300 mb-8">Professional dog grooming services tailored to your dog's needs — with a dash of whimsy.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((s) => (
-            <div key={s.t} className="bg-slate-800/60 p-6 rounded-lg shadow-xl border border-slate-700">
-              <div className="text-2xl font-semibold mb-2">{s.t}</div>
+            <div key={s.t} className="bg-slate-800/60 p-6 rounded-lg shadow-xl border border-slate-700 text-center">
+              <div className="flex items-center justify-center mb-2">
+                <span className="mr-2">🐾</span>
+                <span className="text-xl font-semibold">{s.t}</span>
+              </div>
               <p className="text-slate-300 text-sm">{s.d}</p>
             </div>
           ))}
