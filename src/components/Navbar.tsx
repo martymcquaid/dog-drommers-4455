@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'\nimport { useEffect, useState } from 'react'\nimport Paw from './Paw'
+import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import Paw from './Paw'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -28,8 +30,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 text-white font-semibold text-xl flex items-center">
-            <span className="bg-rose-500 text-white px-2 py-0.5 rounded mr-2">🐾</span>
-            Pawfect Groomers
+            <Paw size={18} />
+            <span className="ml-2">Pawfect Groomers</span>
           </div>
           <div className="hidden md:flex items-center">
             <div className="ml-10 flex items-baseline space-x-4">
