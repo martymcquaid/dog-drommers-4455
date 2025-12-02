@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'\nimport { useEffect, useState } from 'react'\nimport Paw from './Paw'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
