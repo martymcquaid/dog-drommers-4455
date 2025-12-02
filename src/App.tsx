@@ -1,5 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Navbar from './components/Navbar'
+import Services from './pages/Services'
+import Gallery from './pages/Gallery'
+import Booking from './pages/Booking'
 
 // IMPORTANT: For navigation, always use <Link> from react-router-dom, not <a> tags
 // This ensures client-side routing works correctly with the preview URL base path
@@ -7,9 +11,16 @@ import Home from './pages/Home'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <>
+      <Navbar />
+      <div className="pt-16"><!-- spacer for fixed navbar --></div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/booking" element={<Booking />} />
+      </Routes>
+    </>
   )
 }
 
