@@ -1,5 +1,5 @@
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 
 export default function Home() {
   const [email, setEmail] = useState('')
@@ -40,7 +40,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden lg:block rounded-2xl overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1200&auto=format&fit=crop" alt="Happy dog" className="w-full h-96 object-cover" />
+            <img src="https://images.unsplash.com/photo-31?fill?placeholder" alt="Happy dog" className="w-full h-96 object-cover" />
           </div>
         </div>
       </section>
@@ -86,6 +86,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-6">Testimonials</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div key={t.name} className="bg-slate-800/60 p-6 rounded-xl border border-slate-700">
+                <p className="text-slate-300 italic">"{t.text}"</p>
+                <div className="mt-3 text-sm font-semibold">{t.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Preview */}
       <section className="py-12 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,8 +140,6 @@ export default function Home() {
           {subscribed && <div className="mt-2 text-green-300">Thanks for subscribing!</div>}
         </div>
       </section>
-
-      {subscribed && null}
     </main>
   )
 }
