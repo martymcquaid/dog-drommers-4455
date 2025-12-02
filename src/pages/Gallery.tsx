@@ -18,13 +18,10 @@ export default function Gallery() {
         <h2 className="text-3xl font-bold mb-6">Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((src) => (
-            <img
-              key={src}
-              src={src}
-              alt="Dog"
-              className="w-full h-48 object-cover rounded-lg cursor-pointer"
-              onClick={() => setSelected(src)}
-            />
+            <div key={src} className="relative rounded-lg overflow-hidden cursor-pointer" onClick={() => setSelected(src)}>
+              <img src={src} alt="Dog" className="w-full h-48 object-cover" />
+              <span className="absolute bottom-1 right-1 bg-black bg-opacity-40 text-white text-xs px-2 py-1 rounded-full" aria-label="paw watermark">🐾</span>
+            </div>
           ))}
         </div>
       </div>
