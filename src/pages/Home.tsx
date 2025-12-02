@@ -1,5 +1,6 @@
-import React, { useState } from 'react'\nimport Paw from '../components/Paw'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Paw from '../components/Paw'
 
 export default function Home() {
   const [email, setEmail] = useState('')
@@ -37,6 +38,10 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link to="/services" className="bg-rose-500 hover:bg-rose-600 px-6 py-3 rounded-md font-semibold">View Services</Link>
               <Link to="/booking" className="bg-slate-200 text-slate-900 px-6 py-3 rounded-md font-semibold">Book Now</Link>
+            </div>
+            <div className="flex items-center gap-2 mt-4">
+              <span className="text-rose-300" aria-label="paw small"><Paw size={16} /></span>
+              <span className="text-sm text-slate-200">Dog-friendly home</span>
             </div>
           </div>
           <div className="hidden lg:block rounded-2xl overflow-hidden shadow-2xl">
@@ -115,7 +120,10 @@ export default function Home() {
               'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1200&auto=format&fit=crop',
               'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1200&auto=format&fit=crop',
             ].map((src) => (
-              <img key={src} src={src} alt="Dog" className="w-full h-28 md:h-32 object-cover rounded-lg" />
+              <div key={src} className="relative rounded-lg overflow-hidden">
+                <img src={src} alt="Dog" className="w-full h-28 md:h-32 object-cover" />
+                <span className="absolute bottom-1 right-1 bg-black bg-opacity-40 text-white text-xs px-2 py-1 rounded-full" aria-label="paw watermark">🐾</span>
+              </div>
             ))}
           </div>
         </div>
