@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Paw from '../components/Paw'
 
 type BookingRecord = {
   id: string
@@ -109,7 +110,10 @@ export default function Booking() {
     <section className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         <div className="bg-slate-800/60 p-6 rounded-xl shadow-xl">
-          <h2 className="text-2xl font-semibold mb-4">Dog Booking Studio</h2>
+          <div className="flex items-center justify-center mb-4 gap-2">
+            <Paw size={22} />
+            <h2 className="text-2xl font-semibold">Dog Booking Studio</h2>
+          </div>
           <p className="text-slate-300 mb-4">A playful, fully fictional booking experience for pampered pups.</p>
           <form onSubmit={onSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="col-span-1">
